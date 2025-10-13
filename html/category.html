@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Moon Shoper/Category</title>
+    <title>The Moon Shopper/Category</title>
     <link
       rel="stylesheet"
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -24,25 +24,20 @@
       <div
         class="h-100 col-6 col-lg-3 logo-box d-flex flex-row align-items-center gap-1 justify-content-between"
       >
-        <img class="h-100" src="/img/Moon Shoper.png" alt="logo" />
-        <h1 style="font-size: 30px" class="fw-bold w-100 text-primary">
-          Moon Shoper
+        <img style="height: 85%" src="/img/Moon Shoper.png" alt="logo" />
+        <h1 style="font-size: 25px" class="fw-bold w-100 text-primary">
+          Moon Shopper
         </h1>
-        <span
-          style="top: 25px; left: 100px"
-          class="position-absolute fw-bold fs-5 text-danger"
-          >The</span
-        >
       </div>
       <div
         class="navbar-md-box col-lg-2 justify-content-between flex-row gap-3"
       >
-        <a href="/index.html">Home</a>
-        <a href="#">Cart</a>
-        <a href="#">Contact</a>
-        <a href="#">Account</a>
-        <a href="#">App</a>
-        <a href="#">About</a>
+        <a class="text-black" href="/index.html">Home</a>
+        <a class="text-black" href="#">Cart</a>
+        <a class="text-black" href="#">Contact</a>
+        <a class="text-black" href="#">Account</a>
+        <a class="text-black" href="#">App</a>
+        <a class="text-black" href="#">About</a>
       </div>
       <div
         class="col-6 col-l-4 h-100 search-and-bar-box d-flex flex-row align-items-center justify-content-end gap-2"
@@ -108,18 +103,91 @@
     <!--Category Nav-->
     <div
       style="height: 100px; margin-top: 100px"
-      class="border-1 border-black border d-flex align-items-center justify-content-center"
+      class="shadow d-flex align-items-center justify-content-center"
     >
-      <h1>The Moon Shoper/Category</h1>
+      <h1>The Moon Shopper/Categories</h1>
     </div>
     <!--Category box-->
     <div
       id="category-box"
-      style="height: fit-content"
-      class="p-2 d-flex flex-wrap category-box justify-content-around gap-3"
+      style="width: fit-content; height: fit-content"
+      class="d-flex flex-row flex-wrap justify-content-around gap-3 align-items-center p-2"
     >
-      <!--card-->
+      <!--cart-->
+
+      <!--end cart-->
     </div>
+    <!---btn cheklist-->
+    <button
+      id="btn-checklist"
+      style="bottom: 100px; right: 30px"
+      class="position-fixed btn p-2 px-3 fs-3 btn-success shadow"
+    >
+      Check List
+      <i style="transform: rotateZ(-90deg)" class="fa-solid fa-caret-down"></i>
+    </button>
+    <div
+      id="check-list-box"
+      style="
+        z-index: 10;
+        bottom: 100px;
+        height: 250px;
+        width: 350px;
+        transform: translateX(0px);
+        background: rgb(191, 191, 191);
+        transition: 0.5s all ease;
+      "
+      class="position-fixed fs-1 end-0 flex-column shadow p-2 rounded-2"
+    >
+      <div class="d-flex flex-rows w-100">
+        <h5 class="w-50 border-1 border-black border-bottom">Chosen Goods</h5>
+        <span id="numOfaddedItems" class="fs-6">added items : 0</span>
+      </div>
+
+      <i
+        style="cursor: pointer"
+        id="hide-list-good-box"
+        class="fa-solid fa-xmark position-absolute top-0 end-0 fs-6 me-1 mt-1"
+      ></i>
+      <!--List good-->
+      <div
+        id="list-good"
+        style="height: 150px"
+        class="bg-light-subtle shadow rounded-3 w-100 p-2"
+      >
+        <!--card-->
+
+        <!--end card-->
+      </div>
+      <div
+        style="height: 18%"
+        class="w-100 mt-2 d-flex flex-row align-items-center justify-content-between rounded-2 shadow"
+      >
+        <button
+          id="btn-concel"
+          style="height: 40px"
+          class="fs-6 border border-1 border-danger d-flex align-items-center btn btn-light shadow"
+        >
+          Concel
+        </button>
+        <button
+          id="btn-addtocart"
+          style="height: 40px"
+          class="fs-5 d-flex flex-row py-1 align-items-center gap-2 btn btn-primary"
+        >
+          Check out
+          <i
+            class="bi fs-3 border-start border-1 border-danger d-flex align-items-center h-100 ps-3 bi-cart-check"
+          ></i>
+        </button>
+      </div>
+    </div>
+    <!--
+    no internet-->
+    <div
+      id="nointernet"
+      class="flex-row align-items-center justify-content-center"
+    ></div>
     <!-- Footer -->
     <footer id="site-footer" style="height: fit-content; width: 100%" class="">
       <div class="container">
@@ -127,7 +195,7 @@
           <div class="row">
             <!-- About -->
             <div class="col-12 col-md-6 col-lg-3 mb-4">
-              <h5>About The Moon Shoper</h5>
+              <h5>About The Moon Shopper</h5>
               <p>
                 We bring you the latest fashion trends and stylish outfits for
                 every occasion. From casual wear to elegant dresses, The Moon
@@ -168,7 +236,8 @@
                   href="#"
                   >Menu</a
                 >
-                <a href="#">App</a>
+                <a href="/html/category.html">Cart</a>
+                <a href="https://google.com">App</a>
                 <a href="#">Contact Us</a>
               </div>
             </div>
@@ -227,9 +296,459 @@
           &copy; <span id="year"></span> The-Moon-Shoper. All rights reserved.
         </div>
       </div>
-
       <!-- /.container -->
     </footer>
+    <!--Payment-->
+    <div
+      id="paymentdialog"
+      style="
+        height: 90%;
+        width: 100%;
+        top: 100px;
+        transform: translateX(0px);
+        z-index: 11;
+
+        backdrop-filter: blur(10px);
+      "
+      class="position-fixed p-3 rounded-2 overflow-hidden"
+    >
+      <div
+        style="height: 7%"
+        class="w-100 col-lg-12 d-flex flex-row justify-content-between border-1 border-bottom"
+      >
+        <h2 class="fw-bold">Payment</h2>
+        <i
+          id="hidepaymentdialog"
+          style="cursor: pointer"
+          class="fa-solid fa-xmark"
+        ></i>
+      </div>
+      <!--Wrap chosen product list and input information to pay-->
+      <div style="height: 94%" class="row mt-lg-2">
+        <!--Chosen product list-->
+        <div id="chosenproductlist" class="h-100 col-12 col-lg-6">
+          <div
+            style="height: 70px"
+            class="w-100 p-2 d-flex flex-row bg-success rounded-top-2"
+          >
+            <img
+              class="h-100 d-flex align-items-center justify-content-center"
+              src="/img/Moon Shoper.png"
+              alt=""
+            />
+            <p class="d-flex flex-column text-white">
+              <span class="fs-5">The Moon Shopper</span>
+              <span>Thank for using our service</span>
+            </p>
+          </div>
+          <div style="height: 230px" class="pb-3 bg-light-subtle">
+            <h5
+              style="height: 12%"
+              class="border-bottom border-1 border-black bg-warning ps-2"
+            >
+              Your chosen items
+            </h5>
+            <div
+              id="cartcheckoutcontainer"
+              style="height: 88%"
+              class="overflow-y-scroll rounded-2"
+            >
+              <!--cart-->
+              <!--end-->
+            </div>
+          </div>
+          <div style="width: 100%">
+            <h5
+              style="height: 12%; padding-bottom: 2px; padding-top: 2px"
+              class="w-100 border-1 border-bottom border-black bg-warning ps-2"
+            >
+              Summary
+            </h5>
+            <div
+              style="background: rgb(243, 243, 243)"
+              class="d-flex flex-column w-100 px-3 rounded-2"
+            >
+              <div
+                class="d-flex flex-row justify-content-between border-bottom border-1"
+              >
+                <span>Total items </span> <span id="numofitmes"></span>
+              </div>
+              <div
+                class="d-flex flex-row w-100 border-bottom border-1 d-flex flex-row justify-content-between"
+              >
+                <span>Price of all items </span>
+                <span id="priceofall">$</span>
+              </div>
+              <div
+                class="d-flex flex-row w-100 justify-content-between border-bottom border-1"
+              >
+                <div>Delivery</div>
+                <span id="delivery">$</span>
+              </div>
+              <div
+                class="d-flex flex-row w-100 justify-content-between border-bottom border-1"
+              >
+                <span>Total </span><span id="totalprice">$</span>
+              </div>
+              <div></div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div style="height: fit-content" class="w-100 d-flex flex-row">
+                <div style="width: 63%" class="">
+                  <div
+                    style="height: 35px"
+                    class="card-icons gap-3 mt-1 d-flex flex-row"
+                  >
+                    <img
+                      src="https://img.icons8.com/color/48/visa.png"
+                      alt="visa"
+                    />
+                    <img
+                      src="https://img.icons8.com/color/48/mastercard-logo.png"
+                      alt="mastercard"
+                    />
+                    <img
+                      style="height: 100%"
+                      class="rounded-5"
+                      src="/img/aba.jpg"
+                      alt=""
+                    />
+                    <img
+                      style="height: 100%"
+                      src="https://www.acledabank.com.kh/kh/assets/layout/logo1.png"
+                      alt=""
+                    />
+                    <img
+                      style="height: 100%"
+                      class="rounded-5"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyPrf0MaCv2fj-k6SC0zSkYcpcvz1M8pfRUA&s"
+                      alt=""
+                    />
+                  </div>
+                  <div class="">Your have a lots of option to pay!</div>
+                </div>
+                <div style="height: 37%" class="h-100 d-flex flex-column">
+                  <span style="font-size: 13px; color: gray"
+                    ><a href="#">Login</a> an account.</span
+                  >
+                  <span style="font-size: 13px; color: gray"
+                    ><a href="#">Sign up</a> or haven't yet?</span
+                  >
+                  <a
+                    id="connectvisacartlink"
+                    href="/index.html"
+                    style="font-size: 14px; cursor: pointer"
+                    class="d-flex flex-row gap-2"
+                    >Connect
+                    <span class="fw-bolder">VISA</span>
+                    card</a
+                  >
+                </div>
+              </div>
+              <button
+                id="gotoinputinfortiontopay"
+                style="margin-bottom: 4px"
+                class="btn w-100 d-block d-lg-none btn-primary"
+              >
+                Pay Now
+              </button>
+              <div style="font-size: 9px">
+                When you completed your payment, you cannot get back your case.
+                You will only get your items you oder!
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--input information to pay-->
+        <div
+          id="inputinformationtopay"
+          class="col-lg-6 h-100 d-lg-flex px-2 border-bottom border-1 d-flex flex-column"
+        >
+          <div
+            style="height: 6%"
+            class="w-100 d-flex border-bottom px-2 border-danger align-items-center flex-row"
+          >
+            <h5 style="height: fit-content" class="w-100">Payment>Options</h5>
+            <i
+              id="backfrominputinformationtopay"
+              style="cursor: pointer; font-size: 13px"
+              class="fa-solid fa-xmark d-block d-lg-none"
+            ></i>
+          </div>
+          <div
+            style="height: 42%"
+            class="w-100 p-2 border-1 border-bottom bg-light"
+          >
+            <!--customer's information-->
+            <div class="h-50 w-100 d-flex flex-row">
+              <img style="height: 100%" src="/img/devlivery.png" alt="" />
+              <div class="w-100 h-100 border-1 border-bottom border-black">
+                <h5 style="font-size: 15px">Customer's Information</h5>
+                <div id="inputcustomerinformation" class="px-3 w-100 h-100">
+                  <div
+                    class="w-100 d-flex flex-row align-items-center border-bottom border-1"
+                  >
+                    <label for="name" style="font-size: 15px" class="w-25 h-25"
+                      >Name</label
+                    >
+                    <input
+                      placeholder="customer's name"
+                      type="text"
+                      name=""
+                      id="name"
+                      style="
+                        border: none;
+                        background: none;
+                        outline: none;
+                        font-size: 14px;
+                      "
+                      class="w-75 h-25"
+                    />
+                    <i style="color: gray" class="fa-solid fa-user"></i>
+                  </div>
+                  <div
+                    class="w-100 d-flex flex-row align-items-center border-bottom border-1"
+                  >
+                    <label for="email" style="font-size: 15px" class="w-25 h-25"
+                      >Email</label
+                    >
+                    <input
+                      placeholder="customer's email"
+                      style="
+                        border: none;
+                        font-size: 14px;
+                        background: none;
+                        outline: none;
+                      "
+                      type="email"
+                      id="email"
+                      class="w-75 h-25 fs-6"
+                    />
+                    <i style="color: gray" class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div
+                    class="w-100 d-flex flex-row align-items-center border-bottom border-1"
+                  >
+                    <label for="phone" style="font-size: 15px" class="w-25 h-25"
+                      >Phone</label
+                    >
+                    <input
+                      placeholder="customer's phone number"
+                      style="
+                        border: none;
+                        font-size: 14px;
+                        background: none;
+                        outline: none;
+                      "
+                      type="text"
+                      id="phone"
+                      class="w-75 h-25"
+                    />
+                    <i style="color: gray" class="fa-solid fa-phone"></i>
+                  </div>
+                  <div
+                    class="w-100 d-flex flex-row align-items-center border-bottom border-1"
+                  >
+                    <label
+                      for="location"
+                      style="font-size: 15px"
+                      class="w-25 h-25"
+                      >Location</label
+                    >
+                    <input
+                      placeholder="cutomer's location"
+                      style="
+                        border: none;
+                        font-size: 14px;
+                        background: none;
+                        outline: none;
+                      "
+                      type="tel"
+                      id="location"
+                      class="w-75 h-25"
+                    />
+                    <i style="color: gray" class="fa-solid fa-location-dot"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="h-50 w-100 pt-2 gap-1 d-flex flex-column align-items-center justify-content-between"
+            >
+              <div
+                style="height: 43%"
+                class="d-flex gap-2 align-items-center border-bottom border-1 flex-row w-100 px-2"
+              >
+                <button
+                  style="width: 40%; font-size: 14px"
+                  class="btn h-75 d-flex border border-1 border-danger align-items-center justify-content-center shadow btn-warning text-white"
+                >
+                  Use a coupon code
+                </button>
+                <div style="font-size: 10px; width: 60%" class="h-100">
+                  Enter your coupon code at checkout to enjoy instant discount
+                  on your purchase.Don't miss out on savings!
+                  <a href="">detials</a>
+                </div>
+              </div>
+              <!--notation-->
+              <div style="height: 37%" class="w-100 d-flex flex-row gap-2 px-1">
+                <div style="font-size: 15px">Notation:</div>
+                <textarea
+                  name=""
+                  id=""
+                  style="font-size: 14px"
+                  class="w-100 h-100 form-control d-flex align-items-center justify-content-center"
+                ></textarea>
+              </div>
+              <div
+                style="height: 20%"
+                class="w-100 d-flex flex-row align-items-center justify-content-between px-1"
+              >
+                <div style="font-size: 10px">
+                  What do you want to do in next step?
+                </div>
+                <button
+                  id="resetpayment"
+                  style="height: 100%"
+                  class="d-flex align-items-center btn rounded-1 border border-1 border-black shadow btn-danger pt-1"
+                >
+                  reset
+                </button>
+                <button
+                  id="hidepaymentdialoginaddmore"
+                  style="height: 100%"
+                  class="d-flex align-items-center btn btn-primary rounded-1 pt-1 border border-1 border-black shadow justify-content-center"
+                >
+                  add more items
+                </button>
+              </div>
+            </div>
+            <!--option pay-->
+          </div>
+          <div style="height: 43%" class="w-100 bg-light py-2 px-5">
+            <h6>Selection a option which you want to use to pay</h6>
+            <div class="d-flex flex-column fw-bold gap-2">
+              <div
+                class="d-flex flex-row justify-content-between border-bottom border-1 ps-2 pb-1"
+              >
+                <span>Pay by VISA card</span>
+                <button
+                  class="btn btn-success py-0 border border-1 border-black shadow"
+                >
+                  Start
+                </button>
+              </div>
+              <div
+                class="d-flex flex-row justify-content-between border-bottom border-1 ps-2 pb-1"
+              >
+                <span>Pay by scan QR code</span>
+                <button
+                  class="btn btn-success py-0 border border-1 border-black shadow"
+                >
+                  Start
+                </button>
+              </div>
+              <div
+                class="d-flex flex-row justify-content-between border-bottom border-1 ps-2 pb-1"
+              >
+                <span>Pay by Phone Number</span>
+                <button
+                  class="btn btn-success py-0 border border-1 border-black shadow"
+                >
+                  Start
+                </button>
+              </div>
+            </div>
+            <span style="font-size: 12px"
+              >We will prepare all goods for you after you have
+              paid.Add,delivery may take longer or shorter depending on the
+              distance between goods location and your location.So, we apologize
+              in advance.</span
+            >
+          </div>
+        </div>
+      </div>
+      <!--dd-->
+    </div>
+    <div
+      id="footerpayment"
+      style="height: 90px; z-index: 12; width: 100%"
+      class="position-fixed bottom-0 bg-warning d-flex d-lg-flex flex-column justify-content-lg-center px-3"
+    >
+      <div
+        class="w-100 ps-2 h5 border-bottom border-1 border-dark shadow rounded-1 d-flex flex-row justify-content-between align-items-center"
+      >
+        Quickly
+        <div
+          style="height: fit-content; font-size: 15px"
+          class="d-lg-flex d-none flex-row pe-2"
+        >
+          <span class="fw-bold">081981012</span>/<span class="fw-bold"
+            >0974993408</span
+          >
+        </div>
+      </div>
+
+      <div
+        style="height: fit-content"
+        class="w-100 d-flex flex-lg-row flex-column"
+      >
+        <div
+          class="px-2 h-100 w-100 d-flex flex-row border-bottom border-1 gap-3 align-items-lg-center justify-content-center justify-content-lg-between"
+        >
+          <a
+            href="https://www.facebook.com/share/1FrBacEra4/?mibextid=wwXIfr"
+            style="text-decoration: none"
+            class="d-flex text-black flex-row align-items-center gap-1"
+          >
+            <i class="fa-brands fs-3 fa-facebook"></i>
+            <span class="d-none d-xl-flex">The Moon Shopper Facebook Page</span>
+            <span style="font-size: 13px" class="d-none d-lg-flex d-xl-none"
+              >The Moon Shopper Facebook Page</span
+            >
+          </a>
+          <a
+            style="text-decoration: none"
+            href="https://t.me/Sorng_Vichet"
+            class="d-flex text-black flex-row align-items-center gap-1"
+          >
+            <i class="fa-brands fs-3 fa-telegram"></i>
+            <span class="d-none d-xl-flex"
+              >The Moon Shoper Telegram Account</span
+            >
+            <span style="font-size: 13px" class="d-none d-lg-flex d-xl-none"
+              >The Moon Shopper Telegram Account
+            </span>
+          </a>
+          <a
+            style="text-decoration: none"
+            href="https://maps.app.goo.gl/JGYqKp3PUvCwShjZ6?g_st=com.google.maps.preview.copy"
+            class="d-flex flex-row text-black align-items-center gap-1"
+          >
+            <i class="fa-solid fs-3 fa-location-dot"></i>
+            <span class="d-none d-xl-flex">The Moon Shoper Location</span>
+            <span style="font-size: 13px" class="d-none d-lg-flex d-xl-none"
+              >The Moon Shopper Location</span
+            >
+          </a>
+          <div class="d-lg-none">
+            or <span class="fw-bold">081981012</span>/<span class="fw-bold"
+              >0974993408</span
+            >
+          </div>
+        </div>
+        <div
+          style="height: 30px; width: 100%; font-size: 14px"
+          class="px-2 d-flex flex-row align-items-center justify-content-center"
+        >
+          If you are near us, you can contact us directly!
+        </div>
+      </div>
+    </div>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/script.js"></script>
     <script>
@@ -259,5 +778,6 @@
         return false;
       }
     </script>
+    <script src="/js/scriptcategory.js"></script>
   </body>
 </html>

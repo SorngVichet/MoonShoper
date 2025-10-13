@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moon Shoper/Homerpage</title>
+    <title>Moon Shopper/Homerpage</title>
     <link
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -31,21 +31,17 @@
       <div
         class="h-100 col-6 col-lg-3 logo-box d-flex flex-row align-items-center gap-1 justify-content-between"
       >
-        <img class="h-75" src="img/Moon Shoper.png" alt="logo" />
-        <h1 style="font-size: 30px" class="fw-bold w-100 text-primary">
-          Moon Shoper
+        <img style="height: 85%;" src="img/Moon Shoper.png" alt="logo" />
+        <h1 style="font-size: 25px" class="fw-bold w-100 text-primary">
+          Moon Shopper
         </h1>
-        <span
-          style="top: 22px; left: 70px"
-          class="position-absolute fw-bold fs-6 text-danger"
-          >The</span
-        >
+       
       </div>
       <div
         class="navbar-md-box col-lg-2 justify-content-between flex-row gap-3"
       >
         <a href="#site-footer">Home</a>
-        <a href="#">Cart</a>
+        <a href="./html/category.html">Cart</a>
         <a href="#">Contact</a>
         <a href="#">Account</a>
         <a href="#">App</a>
@@ -103,7 +99,7 @@
               class="offcanvas-body bg-light-subtle d-flex h-100 flex-column gap-2 p-2"
             >
               <a href="#">HOME</a>
-              <a href="#">CART</a>
+              <a href="./html/category.html">CART</a>
               <a href="#">CONTACT</a>
               <a href="#">ABOUT</a>
               <a href="#">APP</a>
@@ -144,10 +140,11 @@
             >Discover deals and items you’ll love — all in one place</span
           >
           <a
+            id="get-start"
             href="./html/category.html"
             class="btn btn-success p-2 px-3 fs-3 shadow rounded-3"
           >
-            Get Start
+            Get Start With Us
           </a>
         </div>
       </div>
@@ -157,7 +154,7 @@
       style="height: 100px"
       class="d-flex align-items-center shadow px-3 bg-warning"
     >
-      <h2>The Moon Shoper/Category</h2>
+      <h2>The Moon Shoper/Categories</h2>
     </div>
     <!--Category box-->
     <div
@@ -172,48 +169,10 @@
       >
        
         </div>
-        <div
-          style="width: 220px; height: 360px"
-          class="card rounded-3 overflow-hidden shadow border-0"
-        >
-          <!--image box-->
-          <div style="height: 60%" class="overflow-hidden">
-            <img
-              style="width: 100%"
-              src="img/imgforcart/smiley-man-posing-grey-wall_23-2148448892.jpg"
-              alt=""
-            />
-          </div>
-          <!--Describtion-->
-          <div
-            style="height: 40%"
-            class="p-2 d-flex flex-column justify-content-between"
-          >
-            <h4 style="height: 13%" class="">Fashion Style</h4>
-            <span style="font-size: 13.5px; height: 34%" class=""
-              >Lorem ipsum dolor sit amet consectetur adipisicing eaque?</span
-            >
-            <div style="height: 13%; font-size: 15px" class="text-warning">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-half"></i>
-              <i class="bi bi-star"></i>
-            </div>
-            <div
-              style="height: 40%"
-              class="w-100 d-flex flex-row align-items-center justify-content-between"
-            >
-              <span
-                class="border-1 border-end fw-bold border-1 border-black px-4 fs-5"
-                >$ 45</span
-              >
-              <button class="btn btn-primary">ADD NOW</button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
+  </div>
+  
     <!-- Footer -->
     <footer id="site-footer" style="height: fit-content; width: 100%" class="">
       <div class="container">
@@ -221,7 +180,7 @@
           <div class="row">
             <!-- About -->
             <div class="col-12 col-md-6 col-lg-3 mb-4">
-              <h5>About The Moon Shoper</h5>
+              <h5>About The Moon Shopper</h5>
               <p>
                 We bring you the latest fashion trends and stylish outfits for
                 every occasion. From casual wear to elegant dresses, The Moon
@@ -252,6 +211,7 @@
               <h5>Quick Links</h5>
               <div class="footer-links">
                 <a href="#">Home</a>
+                <a href="./html/category.html">Cart</a>
                 <a href="#">Menu</a>
                 <a href="#">App</a>
                 <a href="#">Contact Us</a>
@@ -309,15 +269,15 @@
 
         <!-- Footer bottom -->
         <div class="footer-bottom">
-          &copy; <span id="year"></span> The-Moon-Shoper. All rights reserved.
+          &copy; <span id="year"></span> The-Moon-Shopper. All rights reserved.
         </div>
       </div>
 
       <!-- /.container -->
     </footer>
-
+ <script src="script.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+   
     <script>
       // Set current year
       document.getElementById("year").textContent = new Date().getFullYear();

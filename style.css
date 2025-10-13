@@ -14,8 +14,7 @@
   transition: 0.5s all ease;
 }
 nav {
-  backdrop-filter: blur(3px);
-  background-color: rgba(199, 199, 199, 0.3);
+  background: rgb(255, 255, 255, 0.7);
 }
 #menu-box {
   a {
@@ -152,4 +151,33 @@ nav {
 }
 .category-box-homepage::-webkit-scrollbar {
   display: none;
+}
+/*List goods*/
+#list-good {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+#list-good::-webkit-scrollbar {
+  display: none;
+}
+/*Check out*/
+#cartcheckoutcontainer::-webkit-scrollbar {
+  display: none;
+}
+#Cart {
+  transition: 0.5s all ease;
+}
+#Cart:hover {
+  border: 1px solid rgb(106, 106, 106);
+
+  transform: scale(0.96);
+}
+/*connect visa card*/
+#connectvisacartlink {
+  text-decoration: none;
+  color: rgb(85, 85, 85);
+}
+#connectvisacartlink:hover {
+  text-decoration: underline;
+  color: rgb(1, 1, 156);
 }
