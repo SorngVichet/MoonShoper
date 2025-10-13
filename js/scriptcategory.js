@@ -204,6 +204,7 @@ fetch("https://sorngvichet.github.io/TheMoonShoperAPI/TMS-API.json")
         // console.log(getItemscheckout);
         // console.log(count);
         // console.log(cartAddedData);
+        getItemscheckout.reverse();
         getItemscheckout.forEach((itm, ind) => {
           numofitems += 1;
 
