@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moon Shopper/Homerpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      body {
+        height: fit-content;
+
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Nav bar-->
+    <nav style="height: 85px" class="navbar fixed-top px-3 row shadow">
+      <div
+        class="h-100 col-6 col-lg-3 logo-box d-flex flex-row align-items-center gap-1 justify-content-between"
+      >
+        <img style="height: 85%;" src="../img/Moon Shoper.png" alt="logo" />
+        <h1 style="font-size: 25px" class="fw-bold w-100 text-primary">
+          Moon Shopper
+        </h1>
+       
+      </div>
+      <div
+        class="navbar-md-box col-lg-2 justify-content-between flex-row gap-3"
+      >
+        <a href="#site-footer">Home</a>
+        <a href="./html/category.html">Cart</a>
+        <a href="#">Contact</a>
+        <a href="#">Account</a>
+        <a href="#">App</a>
+        <a href="#">About</a>
+      </div>
+      <div
+        class="col-6 col-l-4 h-100 search-and-bar-box d-flex flex-row align-items-center justify-content-end gap-2"
+      >
+        <div
+          class="d-flex w-75 flex-row align-items-center justify-content-between form-check"
+        >
+          <input
+            id="input-type-search"
+            style="background: rgb(214, 214, 214, 0.5)"
+            class="w-100 form-control rounded-5 rounded-end-0"
+            type="search"
+          />
+          <i
+            style="padding: 7px"
+            class="bi bi-search shadow ps-1 bg-light h-100 rounded-end-5"
+          ></i>
+        </div>
+        <div style="width: fit-content" class="">
+          <button
+            class="navbar-toggler border-0 p-1 btn-close-white"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars text-black fs-3"></i>
+          </button>
+          <div
+            style="height: 1000px"
+            class="offcanvas offcanvas-end text-bg-dark rounded-2 overflow-hidden"
+            tabindex="-1"
+            id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel"
+          >
+            <div class="offcanvas-header bg-light text-black">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                Moon Shoper/menu
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-black me-1 mb-2"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div
+              id="menu-box"
+              style="text-decoration: none; color: black"
+              class="offcanvas-body bg-light-subtle d-flex h-100 flex-column gap-2 p-2"
+            >
+              <a href="#">HOME</a>
+              <a href="./html/category.html">CART</a>
+              <a href="#">CONTACT</a>
+              <a href="#">ABOUT</a>
+              <a href="#">APP</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      style="height: fit-content; max-height: 100vh; margin-top: 85px"
+      class="w-100 position-relative shadow overflow-hidden mt-lg-0"
+    >
+      <img
+        style="margin-top: 0px"
+        class="object-fit-contain mb-lg-5 w-100"
+        
+       src="../img/online-shopping-illustration-there-is-a-white-mobile-a-red-shopping-cart-and-a-shopping-bag-design-for-website-sale-banner-landing-page-mobile-app-shop-online-online-store-business-vector.jpg"
+        alt=""
+      />
+      <div
+      
+        style="height: 100%"
+        class="position-absolute top-0 w-100 d-flex flex-column align-items-center justify-content-center align-self-xl-end"
+      >
+        <div
+          style="
+            width: fit-content;
+            height: fit-content;
+            backdrop-filter: blur(4px);
+          "
+          class="d-flex flex-column align-items-center p-3 rounded-4"
+        >
+          <h1
+            style="font-size: 35px"
+            class="text-primary border-bottom border-1 border-black fw-bold p-0"
+          >
+            Shop Smart, Live Better
+          </h1>
+          <span class="text-primary-emphasis fs-6 mb-5 pt-0"
+            >Discover deals and items you’ll love — all in one place</span
+          >
+          <a
+            id="get-start"
+            href="./html/category.html"
+            class="btn btn-success p-2 px-3 fs-3 shadow rounded-3"
+          >
+            Get Start With Us
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--Category Nav-->
+    <div
+      style="height: 100px"
+      class="d-flex align-items-center shadow px-3 bg-warning"
+    >
+      <h2>The Moon Shoper/Categories</h2>
+    </div>
+    <!--Category box-->
+    <div
+      style="width: 100%; height: fit-content"
+      class="p-2 category-box-homepage gap-3"
+    >
+      <!--card-->
+      <div
+        id="category-box"
+        style="width: fit-content; height: fit-content"
+        class="d-flex flex-row gap-3 align-items-center"
+      >
+       
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Footer -->
+    <footer id="site-footer" style="height: fit-content; width: 100%" class="">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <!-- About -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+              <h5>About The Moon Shopper</h5>
+              <p>
+                We bring you the latest fashion trends and stylish outfits for
+                every occasion. From casual wear to elegant dresses, The Moon
+                Shoper offers quality, comfort, and confidence in every piece.
+                Shop your favorite styles online — fashion made simple and
+                affordable!
+              </p>
+              <div class="social-icons mt-2" aria-label="Social links">
+                <a
+                  href="https://www.facebook.com/povchet120209240707?mibextid=wwXIfr&mibextid=wwXIfr"
+                  title="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://youtube.com/@sorngvichet5727?si=jj0qMdlpjC-IFV1A"
+                  title="YouTube"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+              <h5>Quick Links</h5>
+              <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="./html/category.html">Cart</a>
+                <a href="#">Menu</a>
+                <a href="#">App</a>
+                <a href="#">Contact Us</a>
+              </div>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+              <h5>Contact Us</h5>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i><span>+855 81-981-012</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i
+                ><span>sorngvichet168@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i
+                ><span>Phnom Penh, Cambodia</span>
+              </div>
+            </div>
+
+            <!-- Subscribe -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+              <h5>Subscribe</h5>
+              <p>Get updates on new arrivals and special offers.</p>
+              <form
+                id="subscribe-form"
+                class="subscribe-input"
+                onsubmit="return handleSubscribe(event);"
+              >
+                <input
+                  type="email"
+                  id="subscriber-email"
+                  placeholder="Email address"
+                  required
+                  aria-label="Email address"
+                />
+                <button type="submit" class="btn">Subscribe</button>
+              </form>
+              <div
+                id="subscribe-msg"
+                style="
+                  margin-top: 8px;
+                  font-size: 14px;
+                  color: #bfe7c7;
+                  display: none;
+                "
+              ></div>
+            </div>
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.footer-top -->
+
+        <!-- Footer bottom -->
+        <div class="footer-bottom">
+          &copy; <span id="year"></span> The-Moon-Shopper. All rights reserved.
+        </div>
+      </div>
+
+      <!-- /.container -->
+    </footer>
+ <script src="./script.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   
+    <script>
+      // Set current year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Very small subscribe handler (example)
+      function handleSubscribe(e) {
+        e.preventDefault();
+        const email = document.getElementById("subscriber-email").value.trim();
+        const msg = document.getElementById("subscribe-msg");
+
+        // Basic email validation
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+          msg.style.display = "block";
+          msg.style.color = "#f28b82";
+          msg.textContent = "Please enter a valid email.";
+          return false;
+        }
+
+        // Here you would normally send `email` to your API.
+        // We'll show a success message for demo.
+        msg.style.display = "block";
+        msg.style.color = "#bfe7c7";
+        msg.textContent = "Thanks — you are subscribed!";
+        document.getElementById("subscribe-form").reset();
+        return false;
+      }
+    </script>
+  </body>
+</html>
