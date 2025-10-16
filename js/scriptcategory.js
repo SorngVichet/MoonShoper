@@ -28,17 +28,9 @@ const paymentdialog = document.getElementById("paymentdialog");
 const footerpayments = document.getElementById("footerpayment");
 footerpayments.style.transition = `0.5s all ease`;
 paymentdialog.style.transition = `0.5s all ease`;
-footerpayments.style.transform = `translateX(-2000px)`;
+footerpayments.style.transform = `translateX(-3000px)`;
 paymentdialog.style.transform = `translateY(-2000px)`;
-const tran = () => {
-  paymentdialog.style.opacity = 0;
-  footerpayments.style.opacity = 0;
 
-  setTimeout(() => {
-    footerpayments.style.transform = `translateX(-2000px)`;
-    paymentdialog.style.transform = `translateY(-2000px)`;
-  }, 2000);
-};
 //
 const chosenproductlist = document.getElementById("chosenproductlist");
 const inputinfotopay = document.getElementById("inputinformationtopay");
@@ -66,7 +58,8 @@ fetch("https://sorngvichet.github.io/TheMoonShoperAPI/TMS-API.json")
       } else x = 17;
       let cart = `
         <div
-        style="width: 195px; height: 320px;transform:scale"
+        id="cart"
+        style="width: 195px; height: 320px;"
         class="card rounded-3 overflow-hidden shadow border-0"
       >
         <!--image box-->
@@ -114,6 +107,7 @@ fetch("https://sorngvichet.github.io/TheMoonShoperAPI/TMS-API.json")
        `;
       CartContainer.innerHTML += cart;
     });
+
     //ចាប់btn-add-cart
     const BtnAddCart = [];
     const numOfaddedItemsBox = document.getElementById("numOfaddedItems");
@@ -161,6 +155,7 @@ fetch("https://sorngvichet.github.io/TheMoonShoperAPI/TMS-API.json")
               }
             }
             if (bol === true) {
+              getItemscheckout.reverse();
               cartAddedData.push(obj);
               getItemscheckout.push(obj);
 
@@ -204,6 +199,7 @@ fetch("https://sorngvichet.github.io/TheMoonShoperAPI/TMS-API.json")
         // console.log(getItemscheckout);
         // console.log(count);
         // console.log(cartAddedData);
+
         getItemscheckout.reverse();
         getItemscheckout.forEach((itm, ind) => {
           numofitems += 1;
@@ -476,7 +472,7 @@ fetch("https://sorngvichet.github.io/TheMoonShoperAPI/TMS-API.json")
             btnchecklist.style.transform = `translateX(400px)`;
             ListCheckBox.style.transform = `translateX(400px)`;
             paymentdialog.style.transform = `translateY(-2000px)`;
-            footerpayments.style.transform = `translateX(-2000px)`;
+            footerpayments.style.transform = `translateX(-3000px)`;
           }
         });
       });
@@ -485,7 +481,7 @@ fetch("https://sorngvichet.github.io/TheMoonShoperAPI/TMS-API.json")
       .getElementById("hidepaymentdialog")
       .addEventListener("click", () => {
         TotalPrice = 0;
-        footerpayments.style.transform = `translateX(-2000px)`;
+        footerpayments.style.transform = `translateX(-3000px)`;
         paymentdialog.style.transform = `translateY(-2000px)`;
       });
     document
@@ -494,7 +490,7 @@ fetch("https://sorngvichet.github.io/TheMoonShoperAPI/TMS-API.json")
         TotalPrice = 0;
         chosenproductlist.style.display = "block";
         inputinfotopay.style.display = "none";
-        footerpayments.style.transform = `translateX(-2000px)`;
+        footerpayments.style.transform = `translateX(-3000px)`;
         paymentdialog.style.transform = `translateY(-2000px)`;
       });
     document.getElementById("resetpayment").addEventListener("click", () => {
@@ -508,7 +504,7 @@ fetch("https://sorngvichet.github.io/TheMoonShoperAPI/TMS-API.json")
       btnchecklist.style.transform = `translateX(400px)`;
       ListCheckBox.style.transform = `translateX(400px)`;
       paymentdialog.style.transform = `translateY(-2000px)`;
-      footerpayments.style.transform = `translateX(-2000px)`;
+      footerpayments.style.transform = `translateX(-3000px)`;
     });
     if (window.innerWidth <= 991) {
       btngotoinputinfotopay.addEventListener("click", () => {
