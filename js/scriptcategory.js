@@ -59,7 +59,7 @@ fetch("https://sorngvichet.github.io/TheMoonShoperAPI/TMS-API.json")
       let cart = `
         <div
         id="cart"
-        style="width: 195px; height: 320px;"
+        style="width: 191px; height: 320px;"
         class="card rounded-3 overflow-hidden shadow border-0"
       >
         <!--image box-->
@@ -107,7 +107,6 @@ fetch("https://sorngvichet.github.io/TheMoonShoperAPI/TMS-API.json")
        `;
       CartContainer.innerHTML += cart;
     });
-
     //ចាប់btn-add-cart
     const BtnAddCart = [];
     const numOfaddedItemsBox = document.getElementById("numOfaddedItems");
@@ -516,6 +515,7 @@ fetch("https://sorngvichet.github.io/TheMoonShoperAPI/TMS-API.json")
         inputinfotopay.style.display = "none";
       });
     }
+
     window.addEventListener("resize", () => {
       if (window.innerWidth > 991) {
         chosenproductlist.style.display = "block";
